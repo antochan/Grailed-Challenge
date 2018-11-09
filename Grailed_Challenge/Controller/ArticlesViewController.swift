@@ -56,8 +56,10 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = UITableView.automaticDimension
+        var height:CGFloat = CGFloat()
+        height = 250
         return height
     }
+
     
 }

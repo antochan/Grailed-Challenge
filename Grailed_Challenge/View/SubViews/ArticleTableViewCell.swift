@@ -15,10 +15,12 @@ class ArticleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         //Initialization Code
+        articleImageView.addBlackGradientLayer(frame: articleImageView.frame, colors: [.clear, .black])
     }
     
     func update(article: Article) {
-        articleTitleLabel.text = article.title
+        let articleLabelText = article.title + "\n" + article.published_at
+        articleTitleLabel.text = articleLabelText
         let articleImageURL = newImageUrl(article.hero, Int(UIScreen.main.bounds.width))
         articleImageView.loadImageUsingUrlString(articleImageURL)
     }

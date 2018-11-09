@@ -11,19 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="136" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="Grailed_Challenge" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="Grailed_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="135.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="440" height="249.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ETg-Pb-t1V" customClass="CustomImageView" customModule="Grailed_Challenge" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="135.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="249.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yi-6t-wmi">
-                        <rect key="frame" x="54" y="107" width="212" height="18"/>
-                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="14"/>
+                        <rect key="frame" x="46" y="212.5" width="348" height="20.5"/>
+                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="16"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -34,9 +34,9 @@
                     <constraint firstAttribute="trailing" secondItem="ETg-Pb-t1V" secondAttribute="trailing" id="Dcm-DZ-3Nv"/>
                     <constraint firstItem="ETg-Pb-t1V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IPz-lc-dqO"/>
                     <constraint firstItem="ETg-Pb-t1V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Jsy-oA-3KQ"/>
-                    <constraint firstItem="4yi-6t-wmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="38" id="LcK-Ia-dy5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4yi-6t-wmi" secondAttribute="trailing" constant="38" id="Tex-ks-ue0"/>
-                    <constraint firstItem="4yi-6t-wmi" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="pb3-s6-De8"/>
+                    <constraint firstItem="4yi-6t-wmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="LcK-Ia-dy5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4yi-6t-wmi" secondAttribute="trailing" constant="26" id="Tex-ks-ue0"/>
+                    <constraint firstItem="4yi-6t-wmi" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-6" id="pb3-s6-De8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -44,7 +44,7 @@
                 <outlet property="articleImageView" destination="ETg-Pb-t1V" id="tCn-Vu-Ygr"/>
                 <outlet property="articleTitleLabel" destination="4yi-6t-wmi" id="ymH-e3-Rub"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="207.79610194902551"/>
+            <point key="canvasLocation" x="233.59999999999999" y="251.87406296851577"/>
         </tableViewCell>
     </objects>
 </document>
