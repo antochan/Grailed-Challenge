@@ -14,8 +14,8 @@ class ArticleTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //Initialization Code
-        articleImageView.addBlackGradientLayer(frame: articleImageView.frame, colors: [.clear, .black])
+        //adding gradient background to image view
+        articleImageView.addBlackGradientLayer(frame: articleImageView.frame, colors: [.clear, UIColor.black.withAlphaComponent(0.55)])
     }
     
     func update(article: Article) {
