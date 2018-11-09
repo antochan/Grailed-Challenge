@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct API {
+    static var savedSearchURL = " https://www.grailed.com/api/merchandise/marquee"
+    static var articleURL = "https://www.grailed.com/api/articles/ios_index" 
+}

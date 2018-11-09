@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct Data: Decodable {
+    let data : [Article]
+}
+
+struct Article: Decodable {
+    let id: Int
+    let url: String
+    let title: String
+    let published_at: String
+    let published: Bool
+    let hero: String
+}
+
+
