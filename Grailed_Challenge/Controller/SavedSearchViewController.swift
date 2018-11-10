@@ -37,7 +37,6 @@ class SavedSearchViewController: UIViewController {
         layout.minimumLineSpacing = 8
         layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30)
         productCollectionView.collectionViewLayout = layout
-        
         productCollectionView.refreshControl = refresher
     }
     
