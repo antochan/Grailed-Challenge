@@ -11,10 +11,11 @@ import UIKit
 class ArticlesViewController: UIViewController {
 
     @IBOutlet weak var articleTableView: UITableView!
+    var pageNumber = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getArticles()
+        getArticles(page: pageNumber)
         setUpAppearances()
     }
     
@@ -22,8 +23,8 @@ class ArticlesViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Didot-Bold", size: 24)!]
     }
     
-    func getArticles() {
-        ArticleServices.instance.getArticles { [weak self] (success) in
+    func getArticles(page: Int) {
+        ArticleServices.instance.getArticles(page: page) { [weak self] (success) in
             
             guard let strongSelf = self else { return }
             
@@ -59,6 +60,15 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
         var height:CGFloat = CGFloat()
         height = 250
         return height
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let totalRows = tableView.numberOfRows(inSection: indexPath.section)
+        
+        if indexPath.row == totalRows - 1 {
+            pageNumber += 1
+            getArticles(page: pageNumber)
+        }
     }
 
 }
