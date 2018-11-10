@@ -15,10 +15,10 @@ class ArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getArticles()
-        setNavigationBarAttributes()
+        setUpAppearances()
     }
     
-    func setNavigationBarAttributes() {
+    func setUpAppearances() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Didot-Bold", size: 24)!]
     }
     
@@ -61,5 +61,4 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
         return height
     }
 
-    
 }

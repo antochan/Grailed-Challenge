@@ -57,7 +57,7 @@ class CustomImageView: UIImageView {
     
 }
 
-extension UIImageView{
+extension UIImageView {
     func addBlackGradientLayer(frame: CGRect, colors:[UIColor]){
         let gradient = CAGradientLayer()
         gradient.frame = frame

@@ -19,10 +19,25 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     func update(article: Article) {
-        let articleLabelText = article.title + "\n" + article.published_at
+        
+        let articleLabelText = article.title + "\n" + dateTransformer(article.published_at)
         articleTitleLabel.text = articleLabelText
         let articleImageURL = newImageUrl(article.hero, Int(UIScreen.main.bounds.width))
         articleImageView.loadImageUsingUrlString(articleImageURL)
+    }
+    
+    func dateTransformer(_ dateString: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        
+        if let date = dateFormatterGet.date(from: dateString) {
+            return dateFormatterPrint.string(from: date)
+        } else {
+            return dateString
+        }
     }
     
 }

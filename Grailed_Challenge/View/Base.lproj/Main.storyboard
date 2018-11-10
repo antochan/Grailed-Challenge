@@ -12,10 +12,12 @@
         <scene sceneID="eA3-af-Ngv">
             <objects>
                 <tabBarController id="ioO-dc-COF" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cW3-kZ-fSJ">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="cW3-kZ-fSJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Wba-ww-OJN" kind="relationship" relationship="viewControllers" id="RYR-wX-xkc"/>
@@ -30,7 +32,7 @@
         <scene sceneID="Aqi-3U-JlX">
             <objects>
                 <viewControllerPlaceholder storyboardName="Article" id="Wba-ww-OJN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2WK-Hm-N73"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="2WK-Hm-N73"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRy-Sf-JuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +42,7 @@
         <scene sceneID="OrN-7B-ADY">
             <objects>
                 <viewControllerPlaceholder storyboardName="SavedSearch" id="kEZ-21-qR7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rTc-QQ-i3K"/>
+                    <tabBarItem key="tabBarItem" title="Read" id="rTc-QQ-i3K"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nG-0J-AUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
