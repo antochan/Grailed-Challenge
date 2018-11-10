@@ -24,18 +24,21 @@ class ArticlesViewController: UIViewController {
     }
     
     func getArticles(page: Int) {
+        let sv = UIViewController.displaySpinner(onView: self.view)
         ArticleServices.instance.getArticles(page: page) { [weak self] (success) in
             
             guard let strongSelf = self else { return }
-            
+    
             if success {
                 DispatchQueue.main.async {
                     self?.articleTableView.reloadData()
+                    UIViewController.removeSpinner(spinner: sv)
                 }
             } else {
                 let alert = UIAlertController(title: "Error", message: "Failed to retrieve Articles", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
                 strongSelf.present(alert, animated: true, completion: nil)
+                UIViewController.removeSpinner(spinner: sv)
             }
         }
     }

@@ -34,6 +34,7 @@ class SavedSearchViewController: UIViewController {
     }
     
     func getProducts() {
+        let sv = UIViewController.displaySpinner(onView: self.view)
         SavedSearchServices.instance.getProducts { [weak self] (success) in
             
             guard let strongSelf = self else { return }
@@ -41,11 +42,13 @@ class SavedSearchViewController: UIViewController {
             if success {
                 DispatchQueue.main.async {
                     self?.productCollectionView.reloadData()
+                    UIViewController.removeSpinner(spinner: sv)
                 }
             } else {
                 let alert = UIAlertController(title: "Error", message: "Failed to retrieve your searches", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
                 strongSelf.present(alert, animated: true, completion: nil)
+                UIViewController.removeSpinner(spinner: sv)
             }
         }
     }

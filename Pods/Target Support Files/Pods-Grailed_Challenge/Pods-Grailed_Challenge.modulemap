@@ -1,0 +1,6 @@
+framework module Pods_Grailed_Challenge {
+  umbrella header "Pods-Grailed_Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
