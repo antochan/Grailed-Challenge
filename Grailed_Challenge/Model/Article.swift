@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Data: Decodable {
+struct ArticleData: Decodable {
     let data : [Article]
 }
 

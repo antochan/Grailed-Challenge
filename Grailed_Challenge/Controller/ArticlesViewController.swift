@@ -20,7 +20,7 @@ class ArticlesViewController: UIViewController {
     }
     
     func setUpAppearances() {
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Didot-Bold", size: 24)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.DidotBold, size: 24)!]
     }
     
     func getArticles(page: Int) {
@@ -29,7 +29,6 @@ class ArticlesViewController: UIViewController {
             guard let strongSelf = self else { return }
             
             if success {
-                print(ArticleServices.instance.articles)
                 DispatchQueue.main.async {
                     self?.articleTableView.reloadData()
                 }

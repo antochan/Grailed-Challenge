@@ -11,4 +11,7 @@ import UIKit
 
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
+struct font {
+    static let DidotBold = "Didot-Bold"
+}
 

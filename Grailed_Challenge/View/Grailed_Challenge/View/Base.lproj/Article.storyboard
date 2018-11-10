@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dry Clean Only-->
+        <!--○ Dry Clean Only-->
         <scene sceneID="2gq-4Z-22g">
             <objects>
                 <viewController id="MXb-Ff-3up" customClass="ArticlesViewController" customModule="Grailed_Challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oZ9-sv-ZHs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dry Clean Only" id="IRi-HF-NC0"/>
+                    <navigationItem key="navigationItem" title="○ Dry Clean Only" id="IRi-HF-NC0"/>
                     <connections>
                         <outlet property="articleTableView" destination="hQe-HH-teJ" id="K3y-nu-2IE"/>
                     </connections>
