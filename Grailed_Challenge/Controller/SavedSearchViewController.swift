@@ -19,6 +19,12 @@ class SavedSearchViewController: UIViewController {
         setUpCollectionView()
     }
     
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshSearches), for: .valueChanged)
+        return refreshControl
+    }()
+    
     func setUpAppearances() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.DidotBold, size: 24)!]
     }
@@ -31,6 +37,8 @@ class SavedSearchViewController: UIViewController {
         layout.minimumLineSpacing = 8
         layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30)
         productCollectionView.collectionViewLayout = layout
+        
+        productCollectionView.refreshControl = refresher
     }
     
     func getProducts() {
@@ -51,6 +59,17 @@ class SavedSearchViewController: UIViewController {
                 UIViewController.removeSpinner(spinner: sv)
             }
         }
+        
+        let deadline = DispatchTime.now() + .milliseconds(600)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            self.refresher.endRefreshing()
+        }
+    }
+    
+    @objc func refreshSearches() {
+        SavedSearchServices.instance.products.removeAll()
+        getProducts()
+        productCollectionView.reloadData()
     }
 
 }

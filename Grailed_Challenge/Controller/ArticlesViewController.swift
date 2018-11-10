@@ -17,7 +17,14 @@ class ArticlesViewController: UIViewController {
         super.viewDidLoad()
         getArticles(page: pageNumber)
         setUpAppearances()
+        articleTableView.refreshControl = refresher
     }
+    
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshArticles), for: .valueChanged)
+        return refreshControl
+    }()
     
     func setUpAppearances() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.DidotBold, size: 24)!]
@@ -41,6 +48,18 @@ class ArticlesViewController: UIViewController {
                 UIViewController.removeSpinner(spinner: sv)
             }
         }
+        
+        let deadline = DispatchTime.now() + .milliseconds(600)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            self.refresher.endRefreshing()
+        }
+    }
+    
+    @objc func refreshArticles() {
+        ArticleServices.instance.articles.removeAll()
+        pageNumber = 1
+        getArticles(page: pageNumber)
+        articleTableView.reloadData()
     }
 
 }
