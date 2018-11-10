@@ -26,10 +26,12 @@ class ArticlesViewController: UIViewController {
         return refreshControl
     }()
     
+    //change navigation look bar function
     func setUpAppearances() {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.DidotBold, size: 24)!]
     }
     
+    //Network request with specific page number to get articles
     func getArticles(page: Int) {
         let sv = UIViewController.displaySpinner(onView: self.view)
         ArticleServices.instance.getArticles(page: page) { [weak self] (success) in
@@ -55,6 +57,7 @@ class ArticlesViewController: UIViewController {
         }
     }
     
+    //pull to refresh function call 
     @objc func refreshArticles() {
         ArticleServices.instance.articles.removeAll()
         pageNumber = 1

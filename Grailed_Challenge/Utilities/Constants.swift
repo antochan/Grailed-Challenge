@@ -17,6 +17,7 @@ struct font {
 }
 
 extension UIViewController {
+    //displays loading spinner over the UIViewController
     class func displaySpinner(onView : UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.35)
@@ -36,7 +37,7 @@ extension UIViewController {
         
         return spinnerView
     }
-    
+    //removes the spinnerView from the superview 
     class func removeSpinner(spinner :UIView) {
         DispatchQueue.main.async {
             spinner.removeFromSuperview()

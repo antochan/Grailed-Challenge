@@ -29,9 +29,9 @@ class SavedSearchViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: font.DidotBold, size: 24)!]
     }
     
+    //initial setup of Collection View
     func setUpCollectionView() {
         productCollectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
-        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 8
@@ -40,6 +40,7 @@ class SavedSearchViewController: UIViewController {
         productCollectionView.refreshControl = refresher
     }
     
+    //Network request to get products or saved search
     func getProducts() {
         let sv = UIViewController.displaySpinner(onView: self.view)
         SavedSearchServices.instance.getProducts { [weak self] (success) in

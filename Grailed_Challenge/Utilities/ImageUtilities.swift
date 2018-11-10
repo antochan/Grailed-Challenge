@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-//resize image utility
+//resize image utility from Grailed CDN
 public func newImageUrl(_ hero: String, _ width: Int) -> String {
     return "https://cdn.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/rotate=deg:exif/rotate=deg:0/resize=width:" + "\(width)" + ",fit:crop/output=format:jpg,compress:true,quality:95/" + hero
 }
 
-//Custom Image View
+//Custom Image View for Cache and URL loading
 let imageCache = NSCache<NSString, UIImage>()
 
 class CustomImageView: UIImageView {
