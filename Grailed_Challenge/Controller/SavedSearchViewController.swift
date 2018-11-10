@@ -10,9 +10,7 @@ import UIKit
 
 class SavedSearchViewController: UIViewController {
     
-    
     @IBOutlet weak var productCollectionView: UICollectionView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +29,7 @@ class SavedSearchViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 8
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30)
         productCollectionView.collectionViewLayout = layout
     }
     
@@ -41,7 +39,6 @@ class SavedSearchViewController: UIViewController {
             guard let strongSelf = self else { return }
             
             if success {
-                print(SavedSearchServices.instance.products)
                 DispatchQueue.main.async {
                     self?.productCollectionView.reloadData()
                 }
@@ -70,9 +67,9 @@ extension SavedSearchViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellsAcross: CGFloat = 2
-        let spaceBetweenCells: CGFloat = 17
+        let spaceBetweenCells: CGFloat = 8
         let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
-        return CGSize(width: dim-30, height: dim+50)
+        return CGSize(width: dim-30, height: dim+20)
     }
     
     

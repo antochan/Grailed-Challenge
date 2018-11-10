@@ -16,7 +16,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     
     func update(product: Product) {
-        let productImageURL = newImageUrl(product.image_url, 148)
+        let productImageURL = newImageUrl(product.image_url, Int(UIScreen.main.bounds.width))
         productImageView.loadImageUsingUrlString(productImageURL)
         productNameLabel.text = product.name
     }

@@ -186,7 +186,7 @@
 		8A34EC5D2190180600369898 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A34EC6E2195157E00369898 /* SubViews */,
+				8A34EC6E2195157E00369898 /* Cells */,
 				8A34EC302190179000369898 /* Main.storyboard */,
 				8A34EC6421901BD600369898 /* SavedSearch.storyboard */,
 				8A34EC6121901BBF00369898 /* Article.storyboard */,
@@ -204,7 +204,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		8A34EC6E2195157E00369898 /* SubViews */ = {
+		8A34EC6E2195157E00369898 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				8A34EC71219515C500369898 /* ArticleTableViewCell.swift */,
@@ -212,7 +212,7 @@
 				8A34EC7D2196DB4F00369898 /* ProductCollectionViewCell.swift */,
 				8A34EC7E2196DB4F00369898 /* ProductCollectionViewCell.xib */,
 			);
-			path = SubViews;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
