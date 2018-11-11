@@ -30,6 +30,7 @@
 		8A34EC7F2196DB4F00369898 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34EC7D2196DB4F00369898 /* ProductCollectionViewCell.swift */; };
 		8A34EC802196DB4F00369898 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A34EC7E2196DB4F00369898 /* ProductCollectionViewCell.xib */; };
 		8A34EC832196EC5600369898 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A34EC822196EC5600369898 /* Loader.json */; };
+		8A34EC872197A68700369898 /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34EC862197A68700369898 /* UtilitiesTest.swift */; };
 		CBBA179735C616C4A59BE2AC /* Pods_Grailed_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5676249FF2320393EC37819 /* Pods_Grailed_Challenge.framework */; };
 		EFED32C4B8343107C1739CBA /* Pods_Grailed_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8943996B296D7B1832E1639F /* Pods_Grailed_ChallengeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		8A34EC7D2196DB4F00369898 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8A34EC7E2196DB4F00369898 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		8A34EC822196EC5600369898 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
+		8A34EC862197A68700369898 /* UtilitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTest.swift; sourceTree = "<group>"; };
 		8C3D3BFD85D7D35910BF643E /* Pods-Grailed_Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grailed_Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grailed_Challenge/Pods-Grailed_Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7FDA0A55505F35E595ED73 /* Pods-Grailed_ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grailed_ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grailed_ChallengeTests/Pods-Grailed_ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5676249FF2320393EC37819 /* Pods_Grailed_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grailed_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 			children = (
 				8A34EC412190179100369898 /* Grailed_ChallengeTests.swift */,
 				8A34EC432190179100369898 /* Info.plist */,
+				8A34EC862197A68700369898 /* UtilitiesTest.swift */,
 			);
 			path = Grailed_ChallengeTests;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A34EC872197A68700369898 /* UtilitiesTest.swift in Sources */,
 				8A34EC422190179100369898 /* Grailed_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

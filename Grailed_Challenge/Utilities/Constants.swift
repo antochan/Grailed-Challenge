@@ -16,6 +16,21 @@ struct font {
     static let DidotBold = "Didot-Bold"
 }
 
+/* This function makes it easy to transform "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" date format into "MMM dd,yyyy" */
+public func dateTransformer(_ dateString: String) -> String {
+    let dateFormatterGet = DateFormatter()
+    dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    
+    let dateFormatterPrint = DateFormatter()
+    dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+    
+    if let date = dateFormatterGet.date(from: dateString) {
+        return dateFormatterPrint.string(from: date)
+    } else {
+        return dateString
+    }
+}
+
 extension UIViewController {
     //displays loading spinner over the UIViewController
     class func displaySpinner(onView : UIView) -> UIView {
