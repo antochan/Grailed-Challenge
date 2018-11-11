@@ -55,9 +55,13 @@ Note: I decided to use collectionview to emulate a shopping experience for a use
 ## Quick Notes
 
 I.	API requests were done through URL session and parsing done through Decodable
+
 II.	Architecture: Mainly follows MVC 
+
 III.	Design pattern: I chose to use a singleton pattern because of the simplicity of the app and quicker implementation (If more time I’d include dependency injection) 
+
 IV.	Tests: Unit test was done through built in XCTest feature 
+
 V.	3rd Party Framework: Just one, Lottie for animation 
 
 
