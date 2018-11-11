@@ -8,6 +8,8 @@ Hello! Thank you all for this opportunity and taking the time to consider me as 
 
 ## Part I: Article API 
 
+![](Screenshots/ArticleFeed.png)
+
 Task: Display a list of articles showing image, title, and publish date with Grailed API. 
 Files: ArticlesViewController, Article (model), ArticleTableViewCell (with XIB), ArticleServices, Article.storyboard
 
@@ -28,6 +30,7 @@ Note: In terms of UI I took reference from the main existing Grailed app.
 
 
 ## Part II: Saved Search API 
+![](Screenshots/SavedSearch.png)
 
 Task: Display a list of saved searches showing image and name with Grailed API. 
 Files: SavedSearchViewController, Product (model), ProductCollectionViewCell (with XIB), Product, SavedSearch.storyboard
