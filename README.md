@@ -10,12 +10,12 @@ Hello! Thank you all for this opportunity and taking the time to consider me as 
 ![](Screenshots/ArticleFeed.png)
 
 Task: Display a list of articles showing image, title, and publish date with Grailed API. 
-Files: ArticlesViewController, Article (model), ArticleTableViewCell (with XIB), ArticleServices, Article.storyboard
+Files: `ArticlesViewController`, `Article` (model), `ArticleTableViewCell` (with XIB), `ArticleServices`, `Article.storyboard`
 
 
 •	ArticleServices is used to make the network request to the API endpoint. (getArticle function) 
 
-•	Article has it’s own storyboard with embedded navigation bar, tab bar and tableview. 
+•	Article has it’s own storyboard with embedded `navigation bar`, `tab bar` and `tableview`. 
 
 •	Each cell has its own xib file with a `CustomImageView`, and a UILabel. 
 
