@@ -16,7 +16,6 @@ Files: ArticlesViewController, Article (model), ArticleTableViewCell (with XIB),
 
 •	Article has it’s own storyboard with embedded navigation bar, tab bar and tableview. 
 
-
 •	Each cell has its own xib file with a `CustomImageView`, and a UILabel. 
 
 •	`CustomImageView` has caching and function `loadImageUsingUrlString` to fetch display image via url. 
@@ -25,7 +24,6 @@ Files: ArticlesViewController, Article (model), ArticleTableViewCell (with XIB),
 
 
 Note: In terms of UI I took reference from the main existing Grailed app. 
-
 
 
 
@@ -42,14 +40,16 @@ Files: SavedSearchViewController, Product (model), ProductCollectionViewCell (wi
 •	Each cell has its own xib file with a `CustomImageView`, and a UILabel.
 
 
-Note: I decided to use collectionview to emulate for a shopping experience for a user’s saved searches. 
+Note: I decided to use collectionview to emulate a shopping experience for a user’s saved searches. 
 
 
 
 ## Miscellaneous 
 •	I added one 3rd party library called Lottie which displays animations. I mainly used this to indicate loading / disabling user interaction on the screen when loading from a network request. This is the `displaySpinner` and `removeSpinner` function that can be found in Constants.swift 
 
-•	I added a function called `addBlackGradientLayer` in ImageUtilities.swift so the article image can have a gradient effect on it. 
+•	I added a function called `addBlackGradientLayer` in `ImageUtilities.swift` so the article image can have a gradient effect on it. 
+
+•	I added a few test cases on some utility functions in the file `UtilitiesTest.swift`. 
 
 
 
