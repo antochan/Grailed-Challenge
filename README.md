@@ -2,8 +2,7 @@
 
 
 ## Intro:
-Hello! Thank you all for this opportunity and taking the time to consider me as a candidate for Grailed! The link to the GitHub repository is: https://github.com/antochan/Grailed-Challenge. If there are any questions or problems regarding my submission feel free to contact me at 470-240-7328 or antonio.chan@emory.edu. 
-
+Hello! Thank you all for this opportunity and taking the time to consider me as a candidate for Grailed! The link to the GitHub repository is: https://github.com/antochan/Grailed-Challenge. 
 
 
 ## Part I: Article API 
@@ -28,7 +27,6 @@ Files: ArticlesViewController, Article (model), ArticleTableViewCell (with XIB),
 Note: In terms of UI I took reference from the main existing Grailed app. 
 
 
-
 ## Part II: Saved Search API 
 ![](Screenshots/SavedSearch.png)
 
@@ -46,13 +44,26 @@ Files: SavedSearchViewController, Product (model), ProductCollectionViewCell (wi
 Note: I decided to use collectionview to emulate a shopping experience for a user’s saved searches. 
 
 
-
 ## Miscellaneous 
 •	I added one 3rd party library called Lottie which displays animations. I mainly used this to indicate loading / disabling user interaction on the screen when loading from a network request. This is the `displaySpinner` and `removeSpinner` function that can be found in Constants.swift 
 
 •	I added a function called `addBlackGradientLayer` in `ImageUtilities.swift` so the article image can have a gradient effect on it. 
 
 •	I added a few test cases on some utility functions in the file `UtilitiesTest.swift`. 
+
+
+## Quick Notes
+
+I.	API requests were done through URL session and parsing done through Decodable
+II.	Architecture: Mainly follows MVC 
+III.	Design pattern: I chose to use a singleton pattern because of the simplicity of the app and quicker implementation (If more time I’d include dependency injection) 
+IV.	Tests: Unit test was done through built in XCTest feature 
+V.	3rd Party Framework: Just one, Lottie for animation 
+
+
+## Conclusion
+If there was anything in my submission that you’d like to see me add on or if I misinterpreted any of the technical requirements please let me know, I’d be happy to add on or discuss further! In addition, if there are some architecture/design patterns you would like to see me use instead of my current submission please let me know as well! Finally, if there are any questions or problems regarding my submission feel free to contact me at 470-240-7328 or antonio.chan@emory.edu.
+
 
 
 
